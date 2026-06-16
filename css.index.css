@@ -1,0 +1,103 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+background: radial-gradient(circle at 30% 20%, #3a1b7a, #0b0616 60%, #05030a);
+font-family: system-ui;
+color:white;
+overflow:hidden;
+}
+
+/* WRAPPER */
+.wrapper{
+height:100vh;
+display:flex;
+align-items:center;
+}
+
+/* TRACK */
+.track{
+display:flex;
+gap:50px;
+padding:120px 200px; /* FIX: extra ruimte zodat laatste kaart bereikbaar is */
+overflow:hidden;
+cursor:grab;
+}
+
+/* CARD BASE */
+.card{
+min-width:340px;
+height:420px;
+border-radius:22px;
+padding:24px;
+flex-shrink:0;
+transition:0.5s cubic-bezier(.2,.8,.2,1);
+
+background: linear-gradient(
+145deg,
+rgba(255,255,255,0.06),
+rgba(255,255,255,0.02)
+);
+
+border:1px solid rgba(255,255,255,0.08);
+
+opacity:0.35;
+transform:scale(0.88);
+}
+
+/* HERO CARD */
+.card.active{
+opacity:1;
+transform:scale(1.28);
+z-index:10;
+
+background: linear-gradient(
+145deg,
+rgba(150,90,255,0.28),
+rgba(255,255,255,0.04)
+);
+
+box-shadow:
+0 40px 140px rgba(120, 60, 255, 0.35),
+0 0 0 1px rgba(255,255,255,0.12);
+}
+
+/* TEXT */
+.year{
+font-size:12px;
+opacity:0.6;
+letter-spacing:1px;
+}
+
+h2{
+margin-top:10px;
+font-size:22px;
+}
+
+p{
+margin-top:10px;
+font-size:13px;
+opacity:0.75;
+line-height:1.5;
+}
+
+/* IMAGE */
+.image{
+margin-top:20px;
+height:180px;
+border-radius:14px;
+background:rgba(255,255,255,0.08);
+}
+
+.image{
+margin-top:20px;
+height:180px;
+border-radius:14px;
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
+overflow:hidden;
+}
